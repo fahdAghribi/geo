@@ -11,10 +11,9 @@
   console.log(position.coords.latitude + ";" + position.coords.longitude);
   output.innerHTML = '<p>Latitude is ' + position.coords.latitude + '° <br>Longitude is ' + position.coords.longitude + '°</p>';
   const Url = "http://api.positionstack.com/v1/reverse?access_key=d27e04e8d3f280df218b0c289bdb36cc&query=40.39742697232156,-3.6994551306807875"
-    $get(Url,funcion(data,status)){
+    $get(Url,funcion(data,status){
     console.log(`${data}`)
-    }
-  }
+    });
 });
   /* la geolocalización está disponible */
 } else {

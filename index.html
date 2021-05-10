@@ -7,6 +7,12 @@
 
 </body>
   <script>
-    alert("hola")
+   if ("geolocation" in navigator) {
+     console.log("geo")
+  /* la geolocalización está disponible */
+} else {
+  console.log("geo no")
+  /* la geolocalización NO está disponible */
+}
   </script>
 </html> 

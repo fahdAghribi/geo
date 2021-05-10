@@ -10,15 +10,7 @@
   navigator.geolocation.getCurrentPosition(function(position) {
   console.log(position.coords.latitude + ";" + position.coords.longitude);
   output.innerHTML = '<p>Latitude is ' + position.coords.latitude + '° <br>Longitude is ' + position.coords.longitude + '°</p>';
-
-    var img = new Image();
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", "http://api.positionstack.com/v1/forward?access_key=d27e04e8d3f280df218b0c289bdb36cc&query=" + position.coords.latitude + "," + position.coords.longitude, false ); // false for synchronous request
-    xmlHttp.send( null );
-    console.log(xmlHttp.responseText);
-    img.src = "http://maps.googleapis.com/maps/api/staticmap?center=" + position.coords.latitude + "," + position.coords.longitude + "&zoom=13&size=300x300&sensor=false";
-
-    output.appendChild(img);
+  output.appendChild(img);
 });
   /* la geolocalización está disponible */
 } else {
